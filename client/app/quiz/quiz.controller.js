@@ -77,7 +77,9 @@ class QuizCtrl
            }
              else
              {
-                 $scope.juist = "fout";
+                 $scope.vraag = $scope.detailsData[$scope.id].correctAnswer;
+                 $scope.vraag = $scope.vraag +1;
+                 $scope.juist = "fout, het juiste antwoord is antwoord: " + $scope.vraag;
              }
         }
   

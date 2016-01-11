@@ -51,7 +51,16 @@ ngDialog.openConfirm({
       }
       
       $scope.askPassword = function(id,index) {
-          ngDialog.openConfirm({            
+           $http.get('/api/things/'+id).then(response => {
+                 
+                $scope.password = response.data.password;
+                if ($scope.password  == "")
+                    {
+                        location.href = "/quiz/"+id;
+
+                    } else
+                    {
+                          ngDialog.openConfirm({            
              template: '<div><ul><p>ENTER PASSWORD:   <input type="text" ng-model="FormData1.PasswordAttempt"/></p>' +
              
                '<input type="button" value="confirm" ng-click="confirm(FormData1)"/>' +
@@ -59,20 +68,21 @@ ngDialog.openConfirm({
             plain: true,
             scope:$scope      
         }).then(function(value){
-               $http.get('/api/things/'+id).then(response => {
-                 
-                    if (response.data.password == value.PasswordAttempt)
+               
+            if ($scope.password  == value.PasswordAttempt)
                     {
                         location.href = "/quiz/"+id;
 
                     }
-             });
-   
             
         },function(reject){
             console.log(reject);
             
 });
+                    }
+             });
+          
+        
      
       }
       
