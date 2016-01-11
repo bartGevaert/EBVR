@@ -66,3 +66,51 @@ Database -> Name: ebvr User: admin Password: CPEi_YwL56mM
 -             |-- thing.socket.js           Server-side WebSocket implementation
 -             `-- thing.integration.js      Server-side test code
 
+## Supported Configurations
+
+### General
+
+Build Systems: Grunt, Gulp
+Testing:
+Jasmine
+Mocha + Chai + Sinon
+Chai assertions:
+Expect
+Should
+Client
+
+Scripts: Babel, TypeScript
+Markup: HTML, Jade
+Stylesheets: CSS, Stylus, Sass, Less
+Angular Routers: ngRoute, ui-router
+CSS Frameworks: Bootstrap
+Option to include UI Bootstrap
+Server
+
+Scripts: Babel
+Database:
+None,
+MongoDB, SQL
+Authentication boilerplate: Yes, No
+oAuth integrations: Facebook Twitter Google
+Socket.io integration: Yes, No
+
+
+## Available generators
+
+### App
+angular-fullstack (aka angular-fullstack:app)
+Server Side
+angular-fullstack:endpoint
+### Client Side
+angular-fullstack:route
+angular-fullstack:controller
+angular-fullstack:filter
+angular-fullstack:directive
+angular-fullstack:service
+angular-fullstack:provider
+angular-fullstack:factory
+angular-fullstack:decorator
+### Deployment
+angular-fullstack:openshift
+angular-fullstack:heroku
