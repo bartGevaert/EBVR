@@ -36,33 +36,33 @@ Running `npm test` will run the unit tests with karma.
 [EBVR-Server](http://ebvr-ebvr.rhcloud.com/)
 Database -> Name: ebvr User: admin Password: CPEi_YwL56mM
 
-.
-|-- bower.json                            Bower packages(Client-side libraries)
-|-- package.json                          npm packages(Server-side libraries)
-|
-|-- client                                Client-side codes
-|   |-- app
-|   |   |-- app.js                        Client-side main JavaScript code
-|   |   `-- main
-|   |       |-- main.controller.js        Client-side controller code
-|   |       |-- main.controller.spec.js   Client-side test code
-|   |       |-- main.html                 HTML template file
-|   |       |-- main.js                   Client-side routing configuration
-|   |       `-- main.scss                 CSS file
-|   |-- components
-|   |   |-- navbar
-|   |   |   |-- navbar.controller.js      Navbar controller
-|   |   |   `-- navbar.html               Navbar HTML template file
-|   |   `-- socket
-|   |       `-- socket.service.js         Client-side WebSocket code
-|   `-- index.html
-|
-`-- server                                Server-side code
-    `-- api
-        `-- thing
-            |-- index.js                  Server-side API routing configuration
-            |-- thing.controller.js       Server-side controller(API implementation)
-            |-- thing.model.js            Server-side DB model
-            |-- thing.socket.js           Server-side WebSocket implementation
-            `-- thing.integration.js      Server-side test code
+- .
+- |-- bower.json                            Bower packages(Client-side libraries)
+- |-- package.json                          npm packages(Server-side libraries)
+- |
+- |-- client                                Client-side codes
+- |   |-- app
+- |   |   |-- app.js                        Client-side main JavaScript code
+- |   |   `-- main
+- |   |       |-- main.controller.js        Client-side controller code
+- |   |       |-- main.controller.spec.js   Client-side test code
+- |   |       |-- main.html                 HTML template file
+- |   |       |-- main.js                   Client-side routing configuration
+- |   |       `-- main.scss                 CSS file
+- |   |-- components
+- |   |   |-- navbar
+- |   |   |   |-- navbar.controller.js      Navbar controller
+- |   |   |   `-- navbar.html               Navbar HTML template file
+- |   |   `-- socket
+- |   |       `-- socket.service.js         Client-side WebSocket code
+- |   `-- index.html
+- |
+- `-- server                                Server-side code
+-     `-- api
+-         `-- thing
+-             |-- index.js                  Server-side API routing configuration
+-             |-- thing.controller.js       Server-side controller(API implementation)
+-             |-- thing.model.js            Server-side DB model
+-             |-- thing.socket.js           Server-side WebSocket implementation
+-             `-- thing.integration.js      Server-side test code
 
