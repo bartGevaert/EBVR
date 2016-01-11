@@ -1,6 +1,6 @@
 # ebvr
 
-This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.0.2.
+[Angular Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.0.2.
 
 ## Getting Started
 
@@ -24,8 +24,15 @@ This project was generated with the [Angular Full-Stack Generator](https://githu
 
 ## Build & development
 
-Run `grunt build` for building and `grunt serve` for preview.
+Run `grunt build` for building and `grunt serve` for preview. (`grunt serve` = localhost)
+Run `grunt buildcontrol:openshift` for pushing to Openshift.
 
 ## Testing
 
 Running `npm test` will run the unit tests with karma.
+# project-cloud-applications-unicef_sanderbart 
+
+## Location & info
+
+[EBVR-Server](http://ebvr-ebvr.rhcloud.com/)
+Database -> Name: ebvr User: admin Password: CPEi_YwL56mM

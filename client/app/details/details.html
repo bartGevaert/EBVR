@@ -1,0 +1,43 @@
+<navbar></navbar>
+
+<div class=" container " > 
+   
+     <ul ng-repeat="detail in details.detailsData">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4>Vraag {{$index +1}}</h4>
+              
+          </div>
+          <div class="panel-body">
+              <p><b>{{detail.question}}</b></p>
+                <div ng-repeat="answer in detail.answer track by $index">
+            
+     
+              
+                     <input type="radio" ng-model="detail.correctAnswer" value="{{$index}}" name="group{{detail.groupId}}" ng-click="isThisChecked(detail._id,$index)">
+               
+                    <span>{{answer}}</span>
+            </div>
+            </div>
+          </div>
+    </ul>
+    
+    
+    <form class="thing-form" ng-show="nav.isAdmin()">
+        <ul> 
+            <label>Syncs in realtime across clients</label>
+            <input type="text" class="form-control" placeholder="Add a new question" ng-model="newQuestion">
+            <fieldset id="payment_method">
+            <div id="detailsForm">
+             <input type="text" class="form-control" placeholder="Add a possible answer to the question" ng-model="newAnswer1">
+                  <input type="text" class="form-control" placeholder="Add a possible answer to the question" ng-model="newAnswer2">
+            </div>
+</fieldset>
+            <button title="Voeg een antwoord"  type="submit" class="btn glyphiconSize btn-primary glyphicon glyphicon-plus" ng-click="addAnswerHTML('detailsForm')"></button>
+            <button title="Verwijder een antwoord" type="submit" class="btn glyphiconSize btn-danger glyphicon glyphicon-minus" ng-click="removeAnswerHTML('detailsForm')"></button>
+            <button title="Opslaan" type="submit" class="btn glyphiconSize btn-success glyphicon glyphicon-ok" ng-click="addDetail()"></button>
+            <button title="Opslaan" type="submit" class="btn glyphiconSize glyphicon glyphicon-play-circle" ng-click=""></button>
+        </ul>
+    </form>
+</div>  
+<footer></footer>

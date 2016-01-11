@@ -6,30 +6,33 @@
 'use strict';
 import Thing from '../api/thing/thing.model';
 import User from '../api/user/user.model';
+import Detail from '../api/detail/detail.model';
 
 Thing.find({}).removeAsync()
   .then(function() {
     Thing.create({
       name: 'Vragen Reeks 1',
-      info: 'Vragenreeks over .....'
+      info: 'Vragenreeks over .....',
+      password : ''
     }, {
       name: 'Vragen Reeks 2',
-      info: 'Nog een reeks'
+      info: 'Nog een reeks',
+      password : ''
     }, {
       name: 'Vragen Reeks 3',
-      info: 'iets'
+      info: 'iets',
+      password : ''
     }, {
       name: 'Vragen Reeks 4',
-      info: 'nog iets'
+      info: 'nog iets',
+      password : ''
     }, {
       name: 'Vragen Reeks 5',
-      info: 'blabla'
-    }, {
-      name: 'Deployment info',
-      info: 'Easily deploy your app to Heroku or Openshift with the heroku ' +
-             'and openshift subgenerators'
+      info: 'blabla',
+      password : ''
     });
   });
+
 
 User.find({}).removeAsync()
   .then(function() {

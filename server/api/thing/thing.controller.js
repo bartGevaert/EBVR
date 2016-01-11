@@ -68,7 +68,9 @@ exports.index = function(req, res) {
 
 // Gets a single Thing from the DB
 exports.show = function(req, res) {
-  Thing.findByIdAsync(req.params.id)
+  Thing.findById(req.params.id)
+    .populate('details', 'question answer correctAnswer currentQuestion groupId')
+  .execAsync()
     .then(handleEntityNotFound(res))
     .then(responseWithResult(res))
     .catch(handleError(res));

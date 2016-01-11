@@ -10,6 +10,7 @@ angular.module('ebvrApp', [
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap',
+  'ngDialog',
   'validation.match'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
@@ -18,3 +19,4 @@ angular.module('ebvrApp', [
 
     $locationProvider.html5Mode(true);
   });
+    

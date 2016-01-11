@@ -1,35 +1,68 @@
 <navbar></navbar>
 
+        
 <header class="hero-unit" id="banner">
   <div class="container">
     <h1>Unicef</h1>
     <p class="lead">UNICEF heeft een opdracht: ervoor zorgen dat elk land de rechten van kinderen respecteert en naleeft. Wij vinden dit de mooiste opdracht die je kunt krijgen.
 
 </p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+
   </div>
 </header>
 
 <div class="container">
+    
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="page-header">Series:</h1>
+      <h1 class="page-header">Reeksen:</h1>
       <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in main.awesomeThings">
           
-        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="main.deleteThing(thing)" ng-show="nav.isAdmin()">&times;</button></a></li>
+      <li>
           
+      
+            <a href="" ng-click="$event.preventDefault();$event.stopPropagation();askPassword(thing._id,$index)" tooltip="{{thing.info}}" id="thing{{$index}}"><h4>{{thing.name}}</h4   >
+             
+        
+<div ng-show="nav.isAdmin()">
+                <button tooltip="Open reeks" type="submit" class="btn glyphiconSize btn-success glyphicon glyphicon-list" ng-click="$event.preventDefault();$event.stopPropagation();goToQuestions(thing._id)"></button>
+                <button tooltip="Verander naam"  type="submit" class="btn glyphiconSize btn-info glyphicon glyphicon-edit" ng-click="$event.preventDefault();$event.stopPropagation();" ></button>
+                <button tooltip="Password protect" type="submit" class="btn glyphiconSize btn-warning glyphicon glyphicon-lock" ng-click="$event.preventDefault();$event.stopPropagation();setPassword(thing._id)"></button>
+     <button tooltip="Verwijder" type="submit" class="btn glyphiconSize btn-danger glyphicon glyphicon-remove" ng-click="$event.preventDefault();$event.stopPropagation();main.deleteThing(thing)"></button>
+    
+</div>         
+                  
+ </a>
+           
+
+      
+        
+
+             </li>
+      
       </ul>
+    
     </div>
   </div>
 
+ 
+    
   <form class="thing-form" ng-show="nav.isAdmin()">
     <label>Syncs in realtime across clients</label>
     <p class="input-group">
-      <input type="text" class="form-control" placeholder="Add a new name for a 
-series of questions here." ng-model="main.newThing">
+    <div>
+        <input type="text" class="form-control" placeholder="Add a new name for a 
+series of questions here." ng-model="main.newThing"></div>
+
+        
+          
+         <div>
+            <input type="text" class="form-control" placeholder="Description" ng-model="main.newDescription">
       <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" ng-click="main.addThing()">Add</button>
-      </span>
+      </span></div>
+          <div>
+          <button type="submit" class="btn margin-fix btn-primary" ng-click="main.addThing()">Add</button>
+          </div>
     </p>
   </form>
 </div>

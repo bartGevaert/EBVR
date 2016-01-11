@@ -5,7 +5,8 @@ angular.module('ebvrApp')
   .factory('socket', function(socketFactory) {
 
     // socket.io now auto-configures its connection when we ommit a connection url
-    var ioSocket = io('', {
+    var ioSocket = io('', {//standaard leeg, https://github.com/socketio/socket.io/issues/1942 http://ebvr-ebvr.rhcloud.com:8000
+        
       // Send auth token on connection, you will need to DI the Auth service above
       // 'query': 'token=' + Auth.getToken()
       path: '/socket.io-client'
@@ -45,7 +46,8 @@ angular.module('ebvrApp')
             array.splice(index, 1, item);
             event = 'updated';
           } else {
-            array.push(item);
+            array.push(item);// voegt onderaan de list toe
+              //array.unshift(item);//boven aan de list
           }
 
           cb(event, item, array);

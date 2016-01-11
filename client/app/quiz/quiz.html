@@ -1,0 +1,37 @@
+<navbar></navbar>
+
+<div class=" container " > 
+    
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4>Vraag {{id+1}}</h4>
+              
+          </div>
+          <div class="panel-body">
+               <p><b>{{questionData.question}}</b></p>
+                <div ng-repeat="answer in questionData.answer track by $index">
+            
+     
+              
+                     <input type="radio" name="group{{detail.groupId}}" ng-click="getAnswer(detail._ids,$index)">
+               
+                    <span>{{answer}}</span>
+                
+            </div>
+              
+     <div>
+                  <button tooltip="Back" type="submit" class="btn glyphiconSize btn-success glyphicon glyphicon-arrow-left" ng-click="previousQuestion()"></button>
+        <button tooltip="Next" type="submit" class="btn glyphiconSize btn-success glyphicon glyphicon-arrow-right" ng-click="nextQuestion()"></button>
+    </div>
+              
+          </div>
+            
+    </ul>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="{{getPercentage()}}" aria-valuemin="0" 
+  aria-valuemax="100" ng-style="{width : ( getPercentage() + '%' ) }">
+  </div>
+</div>
+    <center >{{juist}}</center>
+</div>
+<footer></footer>
